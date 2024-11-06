@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Srilanka | Pearl of the Indian Ocean</title>
+    <!-- favcon  -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="styles/normalize-fwd.css" />
     <!-- add the googgle font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,5 +27,72 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <script src="scripts/script.js" defer></script>
   </head>
-  <body></body>
+
+  <body>
+    <div class="site-wrapper">
+      <header class="navbar">
+        <div class="logo">
+          <a href="#home"><img src="images/logo.png" alt="logo image" /></a>
+        </div>
+        <div class="navLinks">
+          <ul>
+            <a href="index.html" class="navLink">
+              <li>Home</li>
+            </a>
+            <a href="about.html" class="navLink">
+              <li>Destinations</li>
+            </a>
+            <a href="food.html" class="navLink">
+              <li>food</li>
+            </a>
+            <a href="contact.html" class="navLink">
+              <li>Culture</li>
+            </a>
+          </ul>
+        </div>
+        <div class="burger">
+          <i class="fa fa-bars"></i>
+        </div>
+      </header>
+
+      <main class="page-wrapper">
+        <section id="hero">
+          <h1>Explore Srilanka</h1>
+          <video width="100%" autoplay muted loop>
+            <source src="media/211328_small.mp4" type="video/mp4" />
+            <source src="media/211328_small.mp4" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+        </section>
+        <section id="explore">
+          <div class="card">
+            <img src="images/natural-beauty.png" alt="Natural Beauty of Sri Lanka" />
+            <div class="card-content">
+              <h3>Nature</h3>
+              <p>Explore stunning locations across Sri Lanka.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/culture.jpeg" alt="Sri Lankan Culture" />
+            <div class="card-content">
+              <h3>Culture</h3>
+              <p>
+                Immerse yourself in Sri Lanka's rich traditions and festivals.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/food.png" alt="Adventure in Sri Lanka" />
+            <div class="card-content">
+              <h3>Food</h3>
+              <p><p>Delight in the flavors of Sri Lanka, from spicy curries to sweet tropical treats, a true culinary journey.</p></p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2024 Explore Sri Lanka. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
 </html>

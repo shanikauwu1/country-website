@@ -22,9 +22,37 @@
 
 /* Typography
 --------------------------------------------- */
-body {
-	
-}
+
+body{
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    font-weight: 400;
+    box-sizing: inherit;
+    background-color:#f4f0f0 ;
+   
+  }
+  /* HEADINGS */
+  h1, p {
+    color: #fff;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+    font-family: "Playfair Display", serif;
+  }
+  
+  h2 {
+    color: #000;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+  }
 
 h1,
 h2,
@@ -33,10 +61,11 @@ h4,
 h5,
 h6 {
 	
+	margin: .5em 0;
 }
 
 p {
-	
+	font-size: 1rem;
 }
 
 
@@ -65,43 +94,239 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	
+	text-decoration: none;
 }
 
 a:visited {
-	
+	color: #000000;
 }
 
 a:hover {
-	
+	color: #000000;
 }
 
 a:focus {
-	
+	color: #000000;
 }
 
 a:active {
-	
+	color: #000000;
 }
 
 
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-
-
+.page-wrapper {
+    width: 100%;
+   
+     
+}
+section {
+    margin: 0 0 1.5rem; 
+ }
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-
+ 
 /* Header
 --------------------------------------------- */
+  /* Reset and base styles */
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    color: rgb(15, 2, 2);
+}
+
+.logo img {
+    width: 60px;
+    margin-left: 3rem;
+}
+
+.navLinks ul {
+    display: none; /* Hidden initially for mobile view */
+    list-style: none;
+    padding: 0;
+}
+
+.navLink {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+}
+
+.burger {
+    cursor: pointer;
+    font-size: 2rem;
+    color: rgb(15, 2, 2);
+    margin-right: 3rem;
+}
+/* Show the menu on mobile when burger is clicked */
+.navLinks.active ul {
+    display: block;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    z-index: 99;
+}
+
+.navLinks.active ul li {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #c7c6c6;
+}
+
+/* Larger screen adjustments */
+@media (min-width: 48em) {
+    .navLinks ul {
+        display: flex; /* Show the links horizontally */
+        gap: 3rem;
+    }
+
+    .navLink {
+        padding: 0.5rem 0;
+    }
+
+    .burger {
+        display: none; /* Hide the burger icon on larger screens */
+    }
+}
+
+    
 
 
 /* Main
 --------------------------------------------- */
+section#hero {
+  min-height: 80vh;
+  position: relative;
+}
+section#hero h1{
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%);
+    background-color: rgba(26, 192, 17, 0.1);
+    pointer-events: none;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    font-style: italic;
+    letter-spacing: 1px;
+    width: 100%;
 
+}
 
+section#explore article{
+   padding: 1rem;
+  }
+@media (min-width: 48em) {
+
+  section#hero {
+    min-height: 50vh;
+    
+  }
+section#hero h1{
+
+    top: 50%;
+    padding: 3rem;
+    font-size: 6rem;
+    letter-spacing: 3px;
+    width: 100%;
+
+}
+  
+}
+
+/* explore section */
+#explore {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; /* Full width on mobile */
+    max-width: 400px; /* Optional limit for larger mobile screens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Image styling within the card */
+  .card img {
+    width: 100%;
+    height: auto; /* Adjust height automatically for mobile */
+    object-fit: cover;
+  }
+  
+  /* Card content styling */
+  .card-content {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .card h3 {
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  /* Hover effect for interactive feel */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  /* Hover effects for interactivity */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  @media (min-width: 48em) {
+    #explore {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    
+    .card {
+      width: calc(33.33% - 1rem); /* 3 cards per row with gap */
+    }
+  }
 /* Footer
 --------------------------------------------- */
+footer{
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: #000;
+}
+
+footer p{
+    color: #f6f3f3;
+}
