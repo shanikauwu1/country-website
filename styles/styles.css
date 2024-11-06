@@ -209,7 +209,7 @@ section {
 /* Main
 --------------------------------------------- */
 section#hero {
-  min-height: 80vh;
+  max-height: fit-content;
   position: relative;
 }
 section#hero h1{
