@@ -362,6 +362,142 @@ section#hero h1{
     }
   }
 
+
+
+
+
+
+/* page layout */
+
+
+/* Banner Container for Mobile */
+.fixed-banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh; /* Adjust height for smaller screens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Banner Background Image */
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  z-index: -1;
+}
+
+/* Overlay for Text Contrast */
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* Banner Content */
+.banner-content {
+  padding: 1rem;
+  max-width: 90%; /* Smaller max-width for mobile */
+  animation: fadeIn 1s ease-in-out;
+}
+
+.banner-content h1 {
+  font-size: 1.5rem; /* Smaller heading for mobile */
+  margin-bottom: 0.5rem;
+}
+
+.banner-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.banner-button {
+  padding: 0.5rem 1rem;
+  background-color: #0073e6;
+  color: #fff;
+  font-size: 0.9rem; /* Smaller button text */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.banner-button:hover {
+  background-color: #005bb5;
+}
+
+/* Animation for Smooth Text Appearance */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Medium screens (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .fixed-banner {
+    height: 50vh; /* Increase height for tablets */
+  }
+
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .banner-content p {
+    font-size: 1.25rem;
+  }
+
+  .banner-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Large screens (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .fixed-banner {
+    height: 60vh; /* Full height on desktops */
+  }
+
+  .banner-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner-content p {
+    font-size: 1.5rem;
+  }
+
+  .banner-button {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /* contact form */
   #hero.contact-us{
      min-height: 50vh;
