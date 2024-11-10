@@ -566,7 +566,10 @@ section#explore article{
      min-height: 50vh;
      height: fit-content;
   }
-  /* Base styles for mobile (small screens) */
+  /* Base styles for mobile  */
+.form-wrapper{
+  padding: 1rem;
+}
 form {
   width: 100%;
   padding: 1rem;
@@ -656,12 +659,6 @@ button[type="submit"]:hover {
     font-size: 1.1rem;
   }
 }
-
-/* gallery */
-
-
-
-
 
 
 
