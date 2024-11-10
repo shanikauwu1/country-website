@@ -33,6 +33,7 @@ body{
     background-color:#f4f0f0 ;
    
   }
+
   /* HEADINGS */
   h1, p {
     color: #fff;
@@ -71,6 +72,7 @@ p {
 
 /* Elements
 --------------------------------------------- */
+
 ul {
 	
 }
@@ -156,10 +158,10 @@ section {
     margin: 0 0 1.5rem; 
  }
 
- .section{
+.section{
    min-height: fit-content;
    padding: 1rem 2rem;
- }
+}
 
  .section p{
   color: #000;
@@ -249,26 +251,73 @@ section {
 
 /* Main
 --------------------------------------------- */
-section#hero {
-  max-height: fit-content;
+
+section.hero-section {
   position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+ 
 }
-section#hero h1{
-    color: #fff;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.4);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    pointer-events: none;
-    padding: 0.5rem;
-    text-align: center;
-    font-size: 3rem;
-    font-style: italic;
-    letter-spacing: 1px;
-    width: 100%;
-   
+
+/* Video Styling */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Caption Styling */
+.hero-caption {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for text contrast */
+  border-radius: 5px;
+}
+
+.hero-caption h1 {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.hero-caption p {
+  font-size: 1em;
+}
+
+
+.quote-section {
+  max-width: 90%; /* Adjusts to screen width on mobile */
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 1px solid #ccc;
+  font-style: italic;
+  color: #555;
+  margin: 0 auto;
+}
+
+/* Styling the quote and author */
+.quote-section blockquote {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.quote-section footer {
+  font-weight: bold;
+  color: #948c8c;
+  margin-top: 10px;
+  background-color:#ddd;
 }
 
 section#explore article{
@@ -278,20 +327,30 @@ section#explore article{
 
 @media (min-width: 48em) {
 
-  section#hero {
-    min-height: 50vh;
-    
+  .hero-caption h1 {
+    font-size: 2em;
   }
-section#hero h1{
 
-    top: 50%;
-    padding: 3rem;
-    font-size: 4rem;
-    letter-spacing: 3px;
-    width: 100%;
+  .hero-caption p {
+    font-size: 1.2em;
+  }
 
+.quote-section {
+  max-width: 80%; /* Centers on larger screens with more space */
+  font-size: 1.4em;
+  
 }
   
+}
+
+@media(min-width:64rem){
+  .hero-caption h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-caption p {
+    font-size: 1.3em;
+  }
 }
 
 /* explore section */
