@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- normalize css -->
     <link rel="stylesheet" href="styles/normalize-fwd.css" />
     <!-- add the googgle font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,16 +54,31 @@
           <i class="fa fa-bars"></i>
         </div>
       </header>
-       <section id="hero">
-          <h1>Explore the Wonders of Sri Lanka</h1>
-          <video width="100%" autoplay muted loop>
+      
+        <section class="hero-section">
+          <video autoplay muted loop playsinline class="hero-video">
             <source src="media/srilanka.mp4" type="video/mp4" />
             <source src="media/srilanka.mp4" type="video/webm" />
             Your browser does not support the video tag.
           </video>
+        
+          <div class="hero-caption">
+            <h1>Explore the Wonders of Sri Lanka</h1>
+            <p>Pearl of the Indian Ocean</p>
+          </div>
         </section>
+
+
       <main class="page-wrapper">
        
+       
+        <section class="quote-section">
+          <blockquote>
+            "The island of Ceylon - Sri Lanka is a small universe, It contains as many variations of culture, scenery, and climate as some countries a dozen times its size."
+          </blockquote>
+          <footer>— <cite>Arthur C. Clarke</cite></footer>
+
+      </section>
         <section id="explore">
           <div class="card">
            <a href="nature.html" ><img src="images/natural-beauty.png" alt="Natural Beauty of Sri Lanka" /></a> 
