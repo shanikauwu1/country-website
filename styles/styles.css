@@ -73,20 +73,9 @@ p {
 /* Elements
 --------------------------------------------- */
 
-ul {
-	
-}
-
-ol {
-	
-}
-
-dl {
-	
-}
 
 figure {
-	
+	margin: 0 auto;
 }
 
 table {
@@ -318,9 +307,6 @@ section.hero-section {
   background-color:#ddd;
 }
 
-section#explore article{
-   padding: 1rem;
-  }
 
 
 @media (min-width: 48em) {
@@ -341,7 +327,7 @@ section#explore article{
   
 }
 
-@media(min-width:64rem){
+@media(min-width:64em){
   .hero-caption h1 {
     font-size: 2.5em;
   }
@@ -351,13 +337,24 @@ section#explore article{
   }
 }
 
-/* explore section */
-#explore {
+/* explore section for home*/
+ #explore {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
     justify-content: center;
     padding: 2rem;
+    align-items: center;
+  }
+
+  /* link pages cards section */
+  .card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
+    flex-wrap: wrap;
     align-items: center;
   }
 
@@ -413,6 +410,22 @@ section#explore article{
     #explore {
       grid-template-columns: repeat(3, 1fr);
     }
+
+    .card-container {
+      flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 2rem;
+  
+}
+  #explore .card {
+    width: 100%;
+  }
+  .card {
+    width: calc(33.33% - 1rem);
+  }
+
    
   }
 
@@ -490,7 +503,7 @@ section#explore article{
 }
 
 /* Medium screens (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width:48em) {
   .fixed-banner {
     height: 50vh; /* Increase height for tablets */
   }
@@ -510,7 +523,7 @@ section#explore article{
 }
 
 /* Large screens (desktops, 1024px and up) */
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .fixed-banner {
     height: 60vh; /* Full height on desktops */
   }
@@ -616,7 +629,7 @@ button[type="submit"]:hover {
 }
 
 /* Medium screens (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 48em) {
   form {
     max-width: 600px;
     padding: 1.5rem;
@@ -633,7 +646,7 @@ button[type="submit"]:hover {
 }
 
 /* Large screens (desktops, 1024px and up) */
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   form {
     padding: 2rem;
   }
