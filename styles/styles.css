@@ -92,9 +92,7 @@ figure {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0;
-  font-family: Arial, sans-serif;
-  font-size: 1rem;
+  margin: 1rem auto;
 }
 
 /* Header row styling */
@@ -355,23 +353,14 @@ section#explore article{
 
 /* explore section */
 #explore {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     justify-content: center;
     padding: 2rem;
-    flex-wrap: wrap;
     align-items: center;
   }
-  .card-container{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    justify-content: center;
-    padding: 2rem;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+
   .card {
     background-color: #fff;
     border-radius: 8px;
@@ -380,13 +369,14 @@ section#explore article{
     width: 100%; /* Full width on mobile */
     max-width: 25rem; /* Optional limit for larger mobile screens */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
 
   }
   
   /* Image styling within the card */
   .card img {
     width: 100%;
-    height: auto; /* Adjust height automatically for mobile */
+    height: auto; 
     object-fit: cover;
   }
   
@@ -421,29 +411,10 @@ section#explore article{
 
   @media (min-width: 48em) {
     #explore {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 2rem;
+      grid-template-columns: repeat(3, 1fr);
     }
-
-    .card-container{
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-    
-    .card {
-      width: calc(33.33% - 1rem); /* 3 cards per row with gap */
-    }
+   
   }
-
-
-
-
 
 
 /* page layout */
@@ -557,10 +528,31 @@ section#explore article{
   }
 }
 
+/* credit page */
+#credit-page{
+  padding: 0;
+}
+#credit-page table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
+#credit-page th, td {
+  padding: .5rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.8em;
+}
+@media (min-width: 48em) {
+  tbody td {
+    padding: 1rem;
 
-
-
+}
+  #credit-page th, td {
+   
+    font-size: 1em;
+  }
+}
   /* contact form */
   #hero.contact-us{
      min-height: 50vh;
@@ -568,7 +560,7 @@ section#explore article{
   }
   /* Base styles for mobile  */
 .form-wrapper{
-  padding: 1rem;
+  padding: 1.2rem;
 }
 form {
   width: 100%;
