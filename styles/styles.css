@@ -198,6 +198,9 @@ section {
     font-size: 2rem;
     color: rgb(15, 2, 2);
     margin-right: 3rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
 }
 /* Show the menu on mobile when burger is clicked */
 .navLinks.active ul {
@@ -220,7 +223,7 @@ section {
 @media (min-width: 48em) {
     .navLinks ul {
         display: flex; /* Show the links horizontally */
-        gap: 3rem;
+        gap: 1rem;
     }
 
     .navLink {
