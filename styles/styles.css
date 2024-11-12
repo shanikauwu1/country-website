@@ -548,9 +548,16 @@ section.hero-section {
 #credit-page{
   padding: 0;
 }
+#credit-page figure {
+
+  width: 90%;
+ 
+}
+
 #credit-page table {
-  width: 100%;
-  border-collapse: collapse;
+ 
+  overflow-x:auto;
+ 
 }
 
 #credit-page th, td {
