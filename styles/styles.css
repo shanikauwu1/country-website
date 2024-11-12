@@ -384,7 +384,7 @@ section.hero-section {
   .card-content {
     padding: 1rem;
     text-align: center;
-    height: 10rem;
+    height:fit-content;
   }
   
   .card h3 {
